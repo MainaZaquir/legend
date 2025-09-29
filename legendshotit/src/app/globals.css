@@ -1,0 +1,257 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  /* Radius */
+  --radius: 0.5rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+
+  /* Brand Colors */
+  --gold: #D4AF37;
+  --gold-light: #F4E4A6;
+  --charcoal: #1A1A1A;
+  --charcoal-light: #2A2A2A;
+
+  /* Light Theme */
+  --background: #FFFFFF;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+  --primary: #D4AF37;
+  --primary-foreground: #1A1A1A;
+  --secondary: #F5F5F5;
+  --secondary-foreground: #1A1A1A;
+  --muted: #F5F5F5;
+  --muted-foreground: #6B7280;
+  --accent: #D4AF37;
+  --accent-foreground: #1A1A1A;
+  --destructive: #EF4444;
+  --border: rgba(0,0,0,0.1);
+  --input: rgba(0,0,0,0.05);
+  --ring: #D4AF37;
+
+  /* Charts */
+  --chart-1: #D4AF37;
+  --chart-2: #F4E4A6;
+  --chart-3: #2A2A2A;
+  --chart-4: #6B7280;
+  --chart-5: #9CA3AF;
+
+  /* Sidebar */
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1A1A1A;
+  --sidebar-primary: #D4AF37;
+  --sidebar-primary-foreground: #1A1A1A;
+  --sidebar-accent: #F5F5F5;
+  --sidebar-accent-foreground: #1A1A1A;
+  --sidebar-border: rgba(0,0,0,0.1);
+  --sidebar-ring: #D4AF37;
+}
+
+/* Dark Theme */
+.dark {
+  --background: #0A0A0A;
+  --foreground: #FFFFFF;
+  --card: #1A1A1A;
+  --card-foreground: #FFFFFF;
+  --popover: #1A1A1A;
+  --popover-foreground: #FFFFFF;
+  --primary: #D4AF37;
+  --primary-foreground: #0A0A0A;
+  --secondary: #2A2A2A;
+  --secondary-foreground: #FFFFFF;
+  --muted: #2A2A2A;
+  --muted-foreground: #9CA3AF;
+  --accent: #D4AF37;
+  --accent-foreground: #0A0A0A;
+  --destructive: #EF4444;
+  --border: rgba(255,255,255,0.1);
+  --input: rgba(255,255,255,0.05);
+  --ring: #D4AF37;
+
+  --chart-1: #D4AF37;
+  --chart-2: #F4E4A6;
+  --chart-3: #6B7280;
+  --chart-4: #9CA3AF;
+  --chart-5: #D1D5DB;
+
+  --sidebar: #1A1A1A;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #D4AF37;
+  --sidebar-primary-foreground: #0A0A0A;
+  --sidebar-accent: #2A2A2A;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(255,255,255,0.1);
+  --sidebar-ring: #D4AF37;
+}
+
+/* ==========================
+   Base Layer
+   ========================== */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    letter-spacing: -0.01em;
+    line-height: 1.6;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  @media (min-width: 768px) {
+    h1 { font-size: 3.25rem; }
+  }
+  @media (min-width: 1024px) {
+    h1 { font-size: 4rem; }
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  @media (min-width: 768px) {
+    h2 { font-size: 2.75rem; }
+  }
+  @media (min-width: 1024px) {
+    h2 { font-size: 3.5rem; }
+  }
+
+  h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+  @media (min-width: 768px) {
+    h3 { font-size: 2.25rem; }
+  }
+  @media (min-width: 1024px) {
+    h3 { font-size: 2.75rem; }
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  @media (min-width: 768px) {
+    h4 { font-size: 1.875rem; }
+  }
+
+  h5 {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  @media (min-width: 768px) {
+    h5 { font-size: 1.5rem; }
+  }
+
+  h6 {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+  @media (min-width: 768px) {
+    h6 { font-size: 1.25rem; }
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.625;
+    font-family: var(--font-sans);
+  }
+
+  /* Smooth transitions */
+  .transition-all {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-light);
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: var(--gold);
+  }
+}
+
+/* Hover Effects */
+@layer base {
+  /* Links */
+  a:hover {
+    color: var(--gold);
+  }
+
+  /* Buttons */
+  button:hover,
+  .btn:hover {
+    background-color: var(--gold);
+    color: var(--charcoal);
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Cards / containers */
+  .card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Headings subtle gold glow */
+  h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    color: var(--gold);
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+/* ==========================
+   Utility Fixes
+   ========================== */
+
+/* Hide Next.js error messages */
+nextjs-portal {
+  display: none;
+}
