@@ -21,7 +21,6 @@ const Gallery = () => {
 
   const categories = ["All", "Weddings", "Portraits", "Fashion", "Events"];
 
-  // Sample gallery images - these would be replaced with actual portfolio images
   const galleryImages: GalleryImage[] = [
     // Weddings
     {

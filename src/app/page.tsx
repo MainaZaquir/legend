@@ -11,10 +11,7 @@ import { Toaster } from "sonner";
 
 export default function Home() {
   useEffect(() => {
-    // Add smooth scrolling behavior
     document.documentElement.style.scrollBehavior = 'smooth';
-    
-    // Parallax effect for hero section
     const handleScroll = () => {
       const scrolled = window.pageYOffset;
       const heroElement = document.querySelector('#home');
