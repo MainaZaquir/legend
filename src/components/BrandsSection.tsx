@@ -4,25 +4,25 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const brands = [
-  { name: "SizeMore Chauffeurs", logo: "./Assets/Brands/sizemore.png" },
-  { name: "European Union", logo: "./Assets/Brands/eu.png" },
-  { name: "Irish Embassy", logo: "./Assets/Brands/irish-embassy.png" },
-  { name: "254 Beer District", logo: "./Assets/Brands/254beer.png" },
-  { name: "Self Help Africa", logo: "./Assets/Brands/selfhelpafrica.png" },
-  { name: "Hillcrest", logo: "./Assets/Brands/hillcrest.png" },
-  { name: "Blankets and Wine", logo: "./Assets/Brands/blanketswine.png" },
-  { name: "Gheco Cafe", logo: "./Assets/Brands/gheco.png" },
-  { name: "Booch Africa", logo: "./Assets/Brands/booch.png" },
-  { name: "Aspen Africa Institute", logo: "./Assets/Brands/aspen.png" },
-  { name: "Cornerstone Enterprise", logo: "./Assets/Brands/cornerstone.png" },
-  { name: "Kenya Aviation", logo: "./Assets/Brands/kenyaaviation.png" },
+  { name: "SizeMore Chauffeurs", logo: "/Brands/sizemore.png" },
+  { name: "European Union", logo: "/Brands/eu.png" },
+  { name: "Irish Embassy", logo: "/Brands/irish-embassy.png" },
+  { name: "254 Beer District", logo: "/Brands/254beer.png" },
+  { name: "Self Help Africa", logo: "/Brands/selfhelpafrica.png" },
+  { name: "Hillcrest", logo: "/Brands/hillcrest.png" },
+  { name: "Blankets and Wine", logo: "/Brands/blanketswine.png" },
+  { name: "Gheco Cafe", logo: "/Brands/gheco.png" },
+  { name: "Booch Africa", logo: "/Brands/booch.png" },
+  { name: "Aspen Africa Institute", logo: "/Brands/aspen.png" },
+  { name: "Cornerstone Enterprise", logo: "/Brands/cornerstone.png" },
+  { name: "Kenya Aviation", logo: "/Brands/kenyaaviation.png" },
 ];
 
 export default function BrandsSection() {
   return (
     <section id="brands" className="py-20 bg-black/90">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        {/* Header */}
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,6 @@ export default function BrandsSection() {
           </p>
         </motion.div>
 
-        {/* Brand Logos */}
         <motion.div
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-center"
           initial={{ opacity: 0 }}

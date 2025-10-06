@@ -5,34 +5,35 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Camera, Heart} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Tems1 from "./Assets/Hero/tems-1.png";
-import Tems2 from "./Assets/Hero/tems-2.png";
-import Tems3 from "./Assets/Hero/tems-3.png";
-import Mutoria4 from "./Assets/Hero/mutoria.jpg";
+
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const heroImages = [
     {
-      url: Tems1,
+      url: "/Hero/tems-1.png",
       alt: "Legend Shot It Product Branding Session",
       category: "Product Branding",
+      position: "object-[center_15%]",
     },
     {
-      url: Tems2,
+      url: "/Hero/tems-2.png",
       alt: "Legend Shot It Portrait Session",
       category: "Portraits",
+      position: "object-[center_15%]",
     },
     {
-      url: Tems3,
+      url: "/Hero/tems-3.png",
       alt: "Legend Shot It Fashion Shoot",
       category: "Fashion",
+      position: "object-[center_20%]",
     },
     {
-      url: Mutoria4,
+      url: "/Hero/mutoria.jpg",
       alt: "Legend Shot It Event Coverage",
       category: "Events",
+      position: "object-[center_15%]",
     },
   ];
 
@@ -53,7 +54,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: 1, scale: 1.05 }}
           exit={{ opacity: 0, scale: 1.1 }}
-          transition={{ duration: 1.8, ease: "easeInOut" }}
+          transition={{ duration: 2.4, ease: [0.6, 0.01, 0.05, 0.95] }}
           className="absolute inset-0"
         >
           <Image
@@ -61,7 +62,7 @@ const HeroSection = () => {
             alt={heroImages[currentImageIndex].alt}
             fill
             priority
-            className="object-cover"
+            className={`object-cover ${heroImages[currentImageIndex].position}`}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         </motion.div>

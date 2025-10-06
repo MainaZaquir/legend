@@ -5,7 +5,6 @@ import { Camera, Users, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import Legend from './Assets/Photo/Legend.jpg';
 
 const AboutSection = () => {
   const stats = [
@@ -79,21 +78,17 @@ const AboutSection = () => {
             className="relative"
           >
             <div className="relative overflow-hidden rounded-2xl">
-              <svg
-                viewBox="0 0 800 600"
-                className="w-full h-[600px]"
-                preserveAspectRatio="xMidYMid slice"
-                >
+              
                 <div className="w-full h-[600px]">
                   <Image
-                    src={Legend}
+                    src="/Photo/Legend.jpg"
                     alt="Legend Shot It"
                     fill
                     className="object-cover"
                     priority
                   />
                 </div>
-              </svg>
+              
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               
               {/* Floating card */}
