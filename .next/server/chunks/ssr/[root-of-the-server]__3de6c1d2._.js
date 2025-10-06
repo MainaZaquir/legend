@@ -74,19 +74,19 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$them
 ;
 ;
 const metadata = {
-    title: "LegendShotIt - Premium Photography Portfolio",
+    title: "Legend Shot It ",
     description: "Capturing life's most precious moments through the lens of artistry. Specializing in weddings, portraits, fashion, and events.",
     keywords: "photography, wedding photographer, portrait photography, fashion photography, event photography, Kenya photographer",
     authors: [
         {
-            name: "LegendShotIt"
+            name: "Legend Shot It"
         }
     ],
     openGraph: {
-        title: "LegendShotIt - Premium Photography Portfolio",
+        title: "Legend Shot It ",
         description: "Capturing life's most precious moments through the lens of artistry.",
         type: "website",
-        locale: "en_US"
+        locale: "en_KE"
     }
 };
 function RootLayout({ children }) {

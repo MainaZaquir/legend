@@ -16,15 +16,15 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "LegendShotIt - Premium Photography Portfolio",
+  title: "Legend Shot It ",
   description: "Capturing life's most precious moments through the lens of artistry. Specializing in weddings, portraits, fashion, and events.",
   keywords: "photography, wedding photographer, portrait photography, fashion photography, event photography, Kenya photographer",
-  authors: [{ name: "LegendShotIt" }],
+  authors: [{ name: "Legend Shot It" }],
   openGraph: {
-    title: "LegendShotIt - Premium Photography Portfolio",
+    title: "Legend Shot It ",
     description: "Capturing life's most precious moments through the lens of artistry.",
     type: "website",
-    locale: "en_US",
+    locale: "en_KE",
   },
 };
 
