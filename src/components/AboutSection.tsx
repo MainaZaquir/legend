@@ -1,16 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Camera, Award, Users, Heart } from "lucide-react";
+import { Camera, Users, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
+import Legend from './Assets/Photo/Legend.jpg';
 
 const AboutSection = () => {
   const stats = [
-    { icon: Camera, number: "500+", label: "Projects Completed" },
-    { icon: Award, number: "50+", label: "Awards Won" },
-    { icon: Users, number: "1000+", label: "Happy Clients" },
-    { icon: Heart, number: "5", label: "Years Experience" },
+    { icon: Camera, number: "200+", label: "Projects Completed" },
+    { icon: Users, number: "500+", label: "Happy Clients" },
+    { icon: Heart, number: "6", label: "Years Experience" },
   ];
 
   const scrollToContact = () => {
@@ -44,22 +45,19 @@ const AboutSection = () => {
             
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                At LegendShotIt, we believe that every moment tells a story worth preserving. 
-                Our journey began with a simple vision: to capture life&apos;s most precious moments 
-                through the lens of artistry and emotion.
+                I&apos;m <span className="font-semibold text-foreground">Legend</span> — the eye behind <span className="font-semibold text-foreground">Legend Shot It</span>.  
+                What started as a passion for capturing raw, real moments has grown into a journey 
+                of storytelling through visuals that speak louder than words.
               </p>
               
               <p>
-                Specializing in weddings, portraits, fashion, and events, we bring a unique 
-                blend of technical expertise and creative vision to every project. Our approach 
-                is deeply personal, ensuring that each photograph reflects the authentic essence 
-                of our subjects.
+                I specialize in events, portraits, fashion, and lifestyle photography turning everyday scenes into cinematic moments. 
+                My work is all about energy, culture, and emotion the kind that makes you feel something long after the shot is taken.
               </p>
               
               <p>
-                Based in Kenya, we&apos;ve had the privilege of documenting countless love stories, 
-                milestone celebrations, and creative visions. Every click of our shutter is 
-                guided by our commitment to excellence and our passion for storytelling.
+                Based in Kenya, I&apos;ve had the honor of working with amazing artists, creators and brands each project a new story to tell.  
+                Every frame I shoot is personal, intentional, and driven by one goal: to make moments unforgettable.
               </p>
             </div>
 
@@ -86,12 +84,15 @@ const AboutSection = () => {
                 className="w-full h-[600px]"
                 preserveAspectRatio="xMidYMid slice"
                 >
-                <image
-                  href="https://images.unsplash.com/photo-1554048612-b6a482b224b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  width="100%"
-                  height="100%"
-                  preserveAspectRatio="xMidYMid slice"
-                />
+                <div className="w-full h-[600px]">
+                  <Image
+                    src={Legend}
+                    alt="Legend Shot It"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
               </svg>
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               
@@ -105,10 +106,10 @@ const AboutSection = () => {
               >
                 <Card className="bg-background/90 backdrop-blur-sm border-gold/20">
                   <CardContent className="p-6">
-                    <h3 className="font-serif font-semibold text-lg mb-2">Our Philosophy</h3>
+                    <h3 className="font-serif font-semibold text-lg mb-2">My Philosophy</h3>
                     <p className="text-muted-foreground text-sm">
                       &quot;Every photograph should tell a story that words cannot express. 
-                      We don&apos;t just capture images; we preserve emotions, freeze time, 
+                      I don&apos;t just capture images; I preserve emotions, freeze time, 
                       and create lasting memories.&quot;
                     </p>
                   </CardContent>

@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import Gallery from "@/components/Gallery";
 import AboutSection from "@/components/AboutSection";
+import BrandsSection from "@/components/BrandsSection";  
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { Toaster } from "sonner";
@@ -31,6 +32,7 @@ export default function Home() {
       <HeroSection />
       <Gallery />
       <AboutSection />
+      <BrandsSection />
       <ContactSection />
       <Footer />
       <Toaster />

@@ -21,12 +21,12 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Home", href: "#home" },
-    { name: "Weddings", href: "#weddings" },
-    { name: "Portraits", href: "#portraits" },
-    { name: "Fashion", href: "#fashion" },
-    { name: "Events", href: "#events" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Product Branding", href: "#Product Branding" },
+    { name: "Portraits", href: "#Portraits" },
+    { name: "Fashion", href: "#Fashion" },
+    { name: "Events", href: "#Events" },
+    { name: "About", href: "#About" },
+    { name: "Contact", href: "#Contact" },
   ];
 
   const scrollToSection = (href: string) => {

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, MessageCircle, CreditCard, Send } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -22,11 +22,11 @@ const ContactSection = () => {
   });
 
   const services = [
-    { name: "Wedding Photography", price: "From KES 50,000" },
-    { name: "Portrait Session", price: "From KES 15,000" },
-    { name: "Fashion Shoot", price: "From KES 25,000" },
-    { name: "Event Coverage", price: "From KES 20,000" },
-    { name: "Custom Package", price: "Let's discuss" }
+    { name: "Product Branding" },
+    { name: "Portrait Session" },
+    { name: "Fashion Shoot" },
+    { name: "Event Coverage" },
+    { name: "Custom Package" }
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -48,16 +48,10 @@ Message: ${formData.message || "No additional message"}
 
 Looking forward to hearing from you!`;
 
-    const whatsappUrl = `https://wa.me/254700000000?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/254708475248?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
-  const handleMpesaPayment = () => {
-    toast({
-      title: "M-Pesa Payment",
-      description: "You will receive an M-Pesa prompt on your phone shortly. Please complete the payment to confirm your booking.",
-    });
-  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -159,7 +153,7 @@ Looking forward to hearing from you!`;
                       <option value="">Select a service</option>
                       {services.map((service) => (
                         <option key={service.name} value={service.name}>
-                          {service.name} - {service.price}
+                          {service.name}
                         </option>
                       ))}
                     </select>
@@ -195,15 +189,7 @@ Looking forward to hearing from you!`;
                       Contact via WhatsApp
                     </Button>
                     
-                    <Button
-                      type="button"
-                      onClick={handleMpesaPayment}
-                      variant="outline"
-                      className="flex-1 border-gold text-gold hover:bg-gold hover:text-black"
-                    >
-                      <CreditCard className="w-4 h-4 mr-2" />
-                      Pay with M-Pesa
-                    </Button>
+                    
                   </div>
                 </form>
               </CardContent>
@@ -226,11 +212,11 @@ Looking forward to hearing from you!`;
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-gold" />
-                  <span>+254 700 000 000</span>
+                  <span>+254 708 475 248</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-gold" />
-                  <span>hello@legendshotit.com</span>
+                  <span>legendshotit@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-gold" />
@@ -257,7 +243,7 @@ Looking forward to hearing from you!`;
                     >
                       <span className="font-medium">{service.name}</span>
                       <Badge variant="secondary" className="bg-gold/10 text-gold">
-                        {service.price}
+                        <span>Contact for pricing</span>
                       </Badge>
                     </motion.div>
                   ))}
@@ -269,10 +255,6 @@ Looking forward to hearing from you!`;
                     <div className="flex items-center space-x-2">
                       <MessageCircle className="w-4 h-4 text-green-600" />
                       <span>WhatsApp consultation & booking</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <CreditCard className="w-4 h-4 text-green-600" />
-                      <span>M-Pesa payments accepted</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Send className="w-4 h-4 text-gold" />

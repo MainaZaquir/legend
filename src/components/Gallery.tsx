@@ -19,29 +19,29 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const categories = ["All", "Weddings", "Portraits", "Fashion", "Events"];
+  const categories = ["All", "Product Branding", "Portraits", "Fashion", "Events"];
 
   const galleryImages: GalleryImage[] = [
-    // Weddings
+    // Product Branding
     {
       id: 1,
       url: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       alt: "Wedding ceremony",
-      category: "Weddings",
+      category: "Product Branding",
       title: "Sacred Vows"
     },
     {
       id: 2,
       url: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       alt: "Wedding couple",
-      category: "Weddings",
+      category: "Product Branding",
       title: "Eternal Love"
     },
     {
       id: 3,
       url: "https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       alt: "Wedding reception",
-      category: "Weddings",
+      category: "Product Branding",
       title: "Celebration"
     },
     // Portraits

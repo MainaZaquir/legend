@@ -20,10 +20,10 @@ const Footer = () => {
   ];
 
   const services = [
-    { name: "Wedding Photography", href: "#weddings" },
-    { name: "Portrait Sessions", href: "#portraits" },
-    { name: "Fashion Shoots", href: "#fashion" },
-    { name: "Event Coverage", href: "#events" },
+    { name: "Product Branding", href: "#Product Branding" },
+    { name: "Portrait Sessions", href: "#Portraits" },
+    { name: "Fashion Shoots", href: "#Fashion" },
+    { name: "Event Coverage", href: "#Events" },
   ];
 
   const scrollToSection = (href: string) => {
