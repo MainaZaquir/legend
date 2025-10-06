@@ -1516,36 +1516,8 @@
     object-fit: cover;
   }
 
-  .object-\[center_\%\] {
-    object-position: center% ;
-  }
-
-  .object-\[center_0\%\] {
-    object-position: center 0%;
-  }
-
   .object-\[center_15\%\] {
     object-position: center 15%;
-  }
-
-  .object-\[center_20\%\] {
-    object-position: center 20%;
-  }
-
-  .object-\[center_25\%\] {
-    object-position: center 25%;
-  }
-
-  .object-\[center_30\%\] {
-    object-position: center 30%;
-  }
-
-  .object-\[center_40\%\] {
-    object-position: center 40%;
-  }
-
-  .object-\[center_50\%\] {
-    object-position: center 50%;
   }
 
   .p-3 {

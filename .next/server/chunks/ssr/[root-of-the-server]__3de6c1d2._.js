@@ -74,7 +74,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$them
 ;
 ;
 const metadata = {
-    title: "Legend Shot It ",
+    title: "Legend Shot It",
     description: "Capturing life's most precious moments through the lens of artistry. Specializing in weddings, portraits, fashion, and events.",
     keywords: "photography, wedding photographer, portrait photography, fashion photography, event photography, Kenya photographer",
     authors: [
@@ -83,10 +83,13 @@ const metadata = {
         }
     ],
     openGraph: {
-        title: "Legend Shot It ",
+        title: "Legend Shot It",
         description: "Capturing life's most precious moments through the lens of artistry.",
         type: "website",
         locale: "en_KE"
+    },
+    icons: {
+        icon: "/logo.svg"
     }
 };
 function RootLayout({ children }) {
@@ -103,17 +106,17 @@ function RootLayout({ children }) {
                 children: children
             }, void 0, false, {
                 fileName: "[project]/src/app/layout.tsx",
-                lineNumber: 39,
+                lineNumber: 45,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/layout.tsx",
-            lineNumber: 38,
+            lineNumber: 44,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/layout.tsx",
-        lineNumber: 37,
+        lineNumber: 43,
         columnNumber: 5
     }, this);
 }
