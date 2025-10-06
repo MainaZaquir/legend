@@ -27,12 +27,6 @@ const HeroSection = () => {
       url: "/Hero/tems-3.png",
       alt: "Legend Shot It Fashion Shoot",
       category: "Fashion",
-      position: "object-[center_20%]",
-    },
-    {
-      url: "/Hero/mutoria.jpg",
-      alt: "Legend Shot It Event Coverage",
-      category: "Events",
       position: "object-[center_15%]",
     },
   ];
