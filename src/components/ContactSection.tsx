@@ -71,7 +71,6 @@ Looking forward to hearing from you!`;
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -94,7 +93,6 @@ Looking forward to hearing from you!`;
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -196,7 +194,6 @@ Looking forward to hearing from you!`;
             </Card>
           </motion.div>
 
-          {/* Contact Info & Services */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -204,7 +201,6 @@ Looking forward to hearing from you!`;
             viewport={{ once: true }}
             className="space-y-8"
           >
-            {/* Contact Information */}
             <Card className="border-gold/20">
               <CardHeader>
                 <CardTitle className="font-serif text-2xl">Get in Touch</CardTitle>
@@ -225,7 +221,6 @@ Looking forward to hearing from you!`;
               </CardContent>
             </Card>
 
-            {/* Services & Pricing */}
             <Card className="border-gold/20">
               <CardHeader>
                 <CardTitle className="font-serif text-2xl">Our Services</CardTitle>

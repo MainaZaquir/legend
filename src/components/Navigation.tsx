@@ -49,7 +49,6 @@ const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
-          {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex-shrink-0"
@@ -59,7 +58,6 @@ const Navigation = () => {
             </h1>
           </motion.div>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <motion.button
@@ -72,7 +70,6 @@ const Navigation = () => {
               </motion.button>
             ))}
             
-            {/* Theme Toggle */}
             <Button
               variant="ghost"
               size="icon"
@@ -87,7 +84,6 @@ const Navigation = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center space-x-4">
             <Button
               variant="ghost"
@@ -112,7 +108,6 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div

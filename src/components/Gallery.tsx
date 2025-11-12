@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-// import Image from "next/image";
+import Image from "next/image";
 
 interface GalleryImage {
   id: number;
@@ -20,117 +20,117 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const categories = ["All", "Product Branding", "Portraits", "Fashion", "Events"];
+  const categories = ["All", "Product Branding", "Portraits", "Safari", "Events"];
 
   const galleryImages: GalleryImage[] = [
     // Product Branding
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Wedding ceremony",
+      url: "/Photo/IMG-1.JPG",
+      alt: "Premium product showcase on neutral background",
       category: "Product Branding",
-      title: "Sacred Vows"
+      title: "Luxury Aesthetics",
     },
     {
       id: 2,
-      url: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Wedding couple",
+      url: "/Photo/IMG-2.JPG",
+      alt: "Close-up shot",
       category: "Product Branding",
-      title: "Eternal Love"
+      title: "Signature Identity",
     },
     {
       id: 3,
-      url: "https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Wedding reception",
+      url: "/Photo/IMG-3.JPG",
+      alt: "Close-up shot of product",
       category: "Product Branding",
-      title: "Celebration"
+      title: "Visual Consistency",
     },
     // Portraits
     {
       id: 4,
-      url: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Portrait session",
+      url: "/Photo/IMG-4.JPG",
+      alt: "Natural light portrait capturing genuine expression",
       category: "Portraits",
-      title: "Authentic Beauty"
+      title: "Raw Authenticity",
     },
     {
       id: 5,
-      url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Professional headshot",
+      url: "/Photo/IMG-5.JPG",
+      alt: "Headshot with professional background blur",
       category: "Portraits",
-      title: "Professional Edge"
+      title: "Executive Presence",
     },
     {
       id: 6,
-      url: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Creative portrait",
+      url: "/Photo/IMG-6.JPG",
+      alt: "Conceptual portrait blending style and emotion",
       category: "Portraits",
-      title: "Creative Vision"
+      title: "Artistic Identity",
     },
-    // Fashion
+    // Safari
     {
       id: 7,
-      url: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Fashion shoot",
-      category: "Fashion",
-      title: "Editorial Style"
+      url: "/Photo/IMG-7.jpg",
+      alt: "Giraffe silhouette against an African sunset",
+      category: "Safari",
+      title: "Savannah Serenity",
     },
     {
       id: 8,
-      url: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Fashion model",
-      category: "Fashion",
-      title: "Haute Couture"
+      url: "/Photo/IMG-8.JPG",
+      alt: "Safari crossing the savannah",
+      category: "Safari",
+      title: "Grace in Motion",
     },
     {
       id: 9,
-      url: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Fashion photography",
-      category: "Fashion",
-      title: "Modern Elegance"
+      url: "/Photo/IMG-9.JPG",
+      alt: "Lone lion captured in golden hour light",
+      category: "Safari",
+      title: "Majesty of the Wild",
     },
     // Events
     {
       id: 10,
-      url: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Corporate event",
+      url: "/Photo/IMG-10.JPG",
+      alt: "Corporate event setup",
       category: "Events",
-      title: "Corporate Excellence"
+      title: "Corporate Excellence",
     },
     {
       id: 11,
-      url: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Birthday celebration",
+      url: "/Photo/IMG-11.JPG",
+      alt: "Nairobi Singalong",
       category: "Events",
-      title: "Milestone Moments"
+      title: "Milestone Moments",
     },
     {
       id: 12,
-      url: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Party event",
+      url: "/Photo/IMG-12.JPG",
+      alt: "Kenyan artists",
       category: "Events",
-      title: "Joyful Gatherings"
-    }
+      title: "Joyful Gatherings",
+    },
   ];
 
-  const filteredImages = selectedCategory === "All" 
-    ? galleryImages 
-    : galleryImages.filter(img => img.category === selectedCategory);
+  const filteredImages =
+    selectedCategory === "All"
+      ? galleryImages
+      : galleryImages.filter((img) => img.category === selectedCategory);
 
   const openLightbox = (image: GalleryImage) => {
     setSelectedImage(image);
-    setCurrentImageIndex(filteredImages.findIndex(img => img.id === image.id));
+    setCurrentImageIndex(filteredImages.findIndex((img) => img.id === image.id));
   };
 
-  const closeLightbox = () => {
-    setSelectedImage(null);
-  };
+  const closeLightbox = () => setSelectedImage(null);
 
   const navigateImage = (direction: "prev" | "next") => {
-    const newIndex = direction === "prev" 
-      ? (currentImageIndex - 1 + filteredImages.length) % filteredImages.length
-      : (currentImageIndex + 1) % filteredImages.length;
-    
+    const newIndex =
+      direction === "prev"
+        ? (currentImageIndex - 1 + filteredImages.length) % filteredImages.length
+        : (currentImageIndex + 1) % filteredImages.length;
+
     setCurrentImageIndex(newIndex);
     setSelectedImage(filteredImages[newIndex]);
   };
@@ -138,7 +138,7 @@ const Gallery = () => {
   return (
     <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
+        
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -153,14 +153,13 @@ const Gallery = () => {
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-            Our <span className="text-gold">Masterpieces</span>
+            My <span className="text-gold">Masterpieces</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Explore our curated collection of photography that captures the essence of every moment
           </p>
         </motion.div>
 
-        {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -184,11 +183,7 @@ const Gallery = () => {
           ))}
         </motion.div>
 
-        {/* Gallery Grid */}
-        <motion.div
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
             {filteredImages.map((image, index) => (
               <motion.div
@@ -203,21 +198,16 @@ const Gallery = () => {
                 onClick={() => openLightbox(image)}
               >
                 <div className="relative overflow-hidden rounded-lg aspect-square">
-                  <svg
-                    className="w-full h-full overflow-hidden"
-                    preserveAspectRatio="xMidYMid slice"
-                    viewBox="0 0 800 800"
-                  >
-                    <image
-                      href={image.url}
-                      className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                      width="100%"
-                      height="100%"
-                      preserveAspectRatio="xMidYMid slice"
-                    >
-                      <title>{image.alt || "Image"}</title>
-                    </image>
-                  </svg>
+                  <Image
+                    src={image.url}
+                    alt={image.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw,
+                           (max-width: 1200px) 50vw,
+                           33vw"
+                    priority={index < 3}
+                  />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="text-center text-white">
@@ -233,7 +223,6 @@ const Gallery = () => {
           </AnimatePresence>
         </motion.div>
 
-        {/* Lightbox */}
         <AnimatePresence>
           {selectedImage && (
             <motion.div
@@ -247,24 +236,18 @@ const Gallery = () => {
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 exit={{ scale: 0.8 }}
-                className="relative max-w-4xl max-h-full"
+                className="relative max-w-5xl w-full max-h-[85vh] rounded-lg overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
               >
-                <svg
-                    className="max-w-full max-h-[80vh] rounded-lg"
-                    preserveAspectRatio="xMidYMid meet"
-                    viewBox="0 0 800 600">
-                    <image
-                    href={selectedImage.url}
-                    width="100%"
-                    height="100%"
-                    preserveAspectRatio="xMidYMid meet"
-                    >
-                    <title>{selectedImage.alt || "Selected image"}</title>
-                </image>
-                </svg>
-                
-                {/* Close button */}
+                <Image
+                  src={selectedImage.url}
+                  alt={selectedImage.alt}
+                  width={1200}
+                  height={800}
+                  className="object-contain w-full h-auto"
+                  priority
+                />
+
                 <Button
                   onClick={closeLightbox}
                   variant="ghost"
@@ -274,12 +257,11 @@ const Gallery = () => {
                   <X className="w-6 h-6" />
                 </Button>
 
-                {/* Navigation buttons */}
                 <Button
                   onClick={() => navigateImage("prev")}
                   variant="ghost"
                   size="icon"
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:bg-white/20"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20"
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </Button>
@@ -288,12 +270,11 @@ const Gallery = () => {
                   onClick={() => navigateImage("next")}
                   variant="ghost"
                   size="icon"
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:bg-white/20"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20"
                 >
                   <ChevronRight className="w-6 h-6" />
                 </Button>
 
-                {/* Image info */}
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-xl font-semibold mb-1">{selectedImage.title}</h3>
                   <Badge variant="secondary" className="bg-gold text-black">

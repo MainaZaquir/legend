@@ -9,7 +9,7 @@ import Image from "next/image";
 const AboutSection = () => {
   const stats = [
     { icon: Camera, number: "200+", label: "Projects Completed" },
-    { icon: Users, number: "500+", label: "Happy Clients" },
+    { icon: Users, number: "250+", label: "Happy Clients" },
     { icon: Heart, number: "6", label: "Years Experience" },
   ];
 
@@ -24,7 +24,6 @@ const AboutSection = () => {
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left side - Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -44,16 +43,14 @@ const AboutSection = () => {
             
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                I&apos;m <span className="font-semibold text-foreground">Legend</span> — the eye behind <span className="font-semibold text-foreground">Legend Shot It</span>.  
+                I&apos;m <span className="font-semibold text-foreground">Steve</span> the eye behind <span className="font-semibold text-foreground">Legend Shot It</span>.  
                 What started as a passion for capturing raw, real moments has grown into a journey 
                 of storytelling through visuals that speak louder than words.
               </p>
-              
               <p>
-                I specialize in events, portraits, fashion, and lifestyle photography turning everyday scenes into cinematic moments. 
+                I specialize in events, portraits, Safari and lifestyle photography turning everyday scenes into cinematic moments. 
                 My work is all about energy, culture, and emotion the kind that makes you feel something long after the shot is taken.
               </p>
-              
               <p>
                 Based in Kenya, I&apos;ve had the honor of working with amazing artists, creators and brands each project a new story to tell.  
                 Every frame I shoot is personal, intentional, and driven by one goal: to make moments unforgettable.
@@ -69,7 +66,6 @@ const AboutSection = () => {
             </Button>
           </motion.div>
 
-          {/* Right side - Image */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -91,7 +87,6 @@ const AboutSection = () => {
               
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               
-              {/* Floating card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -114,7 +109,6 @@ const AboutSection = () => {
           </motion.div>
         </div>
 
-        {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -122,7 +116,7 @@ const AboutSection = () => {
           viewport={{ once: true }}
           className="mt-20"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
